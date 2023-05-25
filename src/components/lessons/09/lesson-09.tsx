@@ -4,6 +4,7 @@ import type { ColorName } from '../../../globals/colors';
 import { Box } from '../../common/box/box';
 import { ConfettiFx } from '../../fx/confetti-fx/confetti-fx';
 import { Task09 as Task } from '../../tasks/09/task-09';
+import Classnames from 'classnames';
 
 const boxes: ColorName[] = [
     'turquoiseGreen',
@@ -129,7 +130,7 @@ export const Lesson09 = () => {
         <div className={styles.root}>
             <Task />
             <div className={styles.playground}>
-                <div className={styles.grid} id="grid">
+                <div className={Classnames(styles.grid, styles.glow)} id="grid">
                     {boxes.map((color, idx) => (
                         <Box
                             key={idx}

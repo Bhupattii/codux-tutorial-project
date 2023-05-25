@@ -15,14 +15,6 @@ export const Lesson08 = () => {
         <div className={styles.root}>
             <Task />
             <div className={styles.playground}>
-                <div
-                    className={`${styles.section} ${styles.circles}`}
-                    id="circles"
-                >
-                    <Box color="darkLavender" className={styles.circle} />
-                    <Box color="hotPink" className={styles.circle} />
-                    <Box color="danaPink" className={styles.circle} />
-                </div>
                 <div className={`${styles.section} ${styles.tags}`}>
                     <Box
                         align="left"
@@ -52,6 +44,14 @@ export const Lesson08 = () => {
                     show={lessonSolved}
                     style={{ display: lessonSolved ? 'block' : 'none' }}
                 />
+                <div
+                    className={`${styles.section} ${styles.circles}`}
+                    id="circles"
+                >
+                    <Box color="darkLavender" className={styles.circle} />
+                    <Box color="hotPink" className={styles.circle} />
+                    <Box color="danaPink" className={styles.circle} />
+                </div>
             </div>
         </div>
     );

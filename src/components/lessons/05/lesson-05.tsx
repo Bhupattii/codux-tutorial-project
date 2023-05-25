@@ -3,6 +3,7 @@ import styles from './lesson-05.module.scss';
 import { Box } from '../../common/box/box';
 import { ConfettiFx } from '../../fx/confetti-fx/confetti-fx';
 import { Task05 as Task } from '../../tasks/05/task-05';
+import Classnames from 'classnames';
 
 export const Lesson05 = () => {
     const [lessonSolved, setLessonSolved] = useState(false);
@@ -17,7 +18,13 @@ export const Lesson05 = () => {
         <div className={styles.root}>
             <Task />
             <div className={styles.playground}>
-                <div className={styles.section}>
+                <div
+                    className={Classnames(
+                        styles.section,
+                        styles.row,
+                        styles.margin
+                    )}
+                >
                     <div className={styles.row}>
                         <Box
                             text="N"
